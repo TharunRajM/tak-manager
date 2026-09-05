@@ -11,10 +11,11 @@ app.config["JWT_SECRET_KEY"] = "sjckci348dfktocfmekxcjemtkmejf5k3o"
 
 jwt = JWTManager(app)
 
-app.route("/")
+@app.route("/")
 def home():
     return {
-        "message": "Welcome to the Flask API"
+        "message": "Its Tharun'sTask Manager API",
+        "status": "success"
     }
 app.register_blueprint(auth_blueprint)
 app.register_blueprint(task_bp)
